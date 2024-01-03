@@ -15,7 +15,7 @@
     >E.g React, Redux, jQuery
 
 ### Q3. What is CDN? Why do we use it?
- <p>A Content Delivery Network is a geographically distributed group of server that enables caching the content close to clients. A CDN allows their quick transfer of assets needed for loading a webpage content, including HTML pages, JavaScript files, stylesheets, images and videos.</p>
+ p<>A Content Delivery Network is a geographically distributed group of server that enables caching the content close to clients. A CDN allows their quick transfer of assets needed for loading a webpage content, including HTML pages, JavaScript files, stylesheets, images and videos.</p>
  
  * Today majority of web traffic is served through CDNs, including traffic from major sites like Facebook, Netflix and Amazon.
  * Improves website laod times so that visitor can experience smooth surfing and thus they spend more time on the site.
@@ -28,14 +28,14 @@
 
 React is 'React' because: 
 >- It 'reacts' quickly to changes without reloading the whole webpage.
->- It uses `virtual DOM` to efficiently update parts of an webpage.
+>- It uses `virtual DOM` to efficiently updae parts of an webpage.
 >- It's built around components that 'reacts' and update.
 
 ### Q5. What is crossorigin in script tag?
 
 `crossorigin` HTML attribute sets the mode of the request to and HTTPS `CORS` request.
 
-**CORS**: CORS is used to manage cross-origin requests. It stands for `Cross Origin Resource Sharing`, a mechanism that allows a page to request resources from another domains outside of its own. I defines a way of how a browser and server can interact to determine whether it is safe to allow the cross-origin request. CORS allows servers to specify who can access the assets on the server among other things.
+`CORS`: CORS is to manage cross-origin requests. It stands for `Cross Origin Resource Sharing`, a mechanism that allows a page to request resources from another domains outside of its own. I defines a way of how a browser and server can interact to determine whether it is safe to allow the cross-origin request. CORS allows servers to specify who can access the assets on the server among other things.
 
 A cross-origin request request is a request for a resource e.g. stylesheets, iFrames, images, fonts or scripts from another domain.
 
