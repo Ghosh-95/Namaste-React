@@ -68,7 +68,7 @@ The React library provides two versions of its JavaScript files: react.developme
 
 >*When using a CDN, it's common to load the development version (react.development.js) during development and debugging stages. This allows developers to take advantage of the detailed error messages and warnings provided by the development version for easier debugging. However, in production environments, it is recommended to use the production version (react.production.js) for better performance and reduced file size.*
 
-### What is async and defer?
+### Q8. What is async and defer?
 
 Both are HTML attributes used in script tag. When a browser parses HTML elements it loads all the scripts (JS files) after parsing the HTML. In case of large scale project this process takes much time and cause delay in loading the website. To prevent that delay we use `async` and `defer`.
 
