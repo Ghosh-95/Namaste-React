@@ -69,3 +69,19 @@ const heading = (<h1>React Assignment</h1>);
 
 
 ### Q3. What is the role of `type` attribute in script tag? What options can be used there?
+
+`type` attribute specify the type of any HTML tag. It is same for `<script>` also, it identifies the content inside the `<script>` tag.
+
+~~~
+Here is an example of module type script tag:
+
+<script type="module" src="main.js"></script>
+~~~
+
+In `<script>` tag `type` attribute can be following:
+
+- `text/javascript`: It is the default standard value of a script tag.
+- `text/ecmascript`: This value indicates that the script is following `EcmaScript` standards.
+- `module`: Tells the browser that the script is a module and can be export/import other files or modules into current script.
+- `text/babel`: This indicates that the script is babel type and needs babel to transpile it.
+- `text/typescript`: As the name suggests the script is written in `TypeScript`.
