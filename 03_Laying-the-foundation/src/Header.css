@@ -1,0 +1,35 @@
+html {
+    overflow-x: hidden;
+}
+
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: teal;
+}
+
+header .logo-image {
+    max-width: 100%;
+    width: 3.125rem;
+    border-radius: 100%;
+}
+
+.user-image {
+    max-width: 100%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+}
+
+#search-bar {
+    width: 70%;
+    height: 2rem;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.3rem;
+    padding-left: 1rem;
+}
