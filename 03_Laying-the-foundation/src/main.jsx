@@ -86,7 +86,7 @@ const TitleComponent = () => (
 
 root.render(
   <>
-    <HeaderComponent />
+    {<HeaderComponent />}
     <TitleComponent />
   </>
 );

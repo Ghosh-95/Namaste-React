@@ -16,7 +16,7 @@ const headingElement = (<h1>This is an h1 element.</>)
 
 >*JSX and React are two separate things. They're often use together, but you can use them independently.*
 
-**There are certain rules of writing JSX:**
+<ins>**There are certain rules of writing JSX:**<ins/>
 
 1. To create multiple elements, wrap them under a single parent tag or you can use `Fragments(<></>)` to wrap them.
 
@@ -85,3 +85,56 @@ In `<script>` tag `type` attribute can be following:
 - `module`: Tells the browser that the script is a module and can be export/import other files or modules into current script.
 - `text/babel`: This indicates that the script is babel type and needs babel to transpile it.
 - `text/typescript`: As the name suggests the script is written in `TypeScript`.
+
+### Q4. `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in JSX.
+
+- `{TitleComponent}`: The value describes the 'TitleComponent' as a JavaScript expression or variable. With the help of `{}`, we can embed a JavaScript.
+
+    ~~~
+    const headingElement = (<h1>This is an h1 element.</>)
+
+    root.render(
+        {headingElement}
+    )
+    ~~~
+- `{<TitleComponent/>}`: This value represents a functional component which is returning some JSX. A component is written inside `</>` or `{</>}` expression.
+
+    ~~~
+    function TitleComponent(){
+        return (
+            <h1>This component is returning a heading.</h1>
+        );
+    };
+
+    root.render(
+        <TitleComponent />
+    )
+
+    // OR
+    root.render(
+        {<TitleComponent />}
+    )
+    ~~~
+- `<TitleComponent></TitleComponent>`: `<TitleComponent/>` and `<TitleComponent></TitleComponent>` are equivalent to one another only when 'TitleComponent' has no children. Openinig and Closing tags are created to include child components.
+
+    ~~~
+    function DivComponent(){
+        return (
+            <div className="container"><div/>
+        );
+    };
+
+    function ParaComponent(){
+        return (
+            <p class="children">This is a paragraph</p>
+        );
+    };
+
+    root.render(
+        <>
+            <DivComponent>
+                <ParaComponent />
+            <DivComponent/>
+        </>
+    )
+    ~~~

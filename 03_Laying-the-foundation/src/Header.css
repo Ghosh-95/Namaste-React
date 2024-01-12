@@ -27,6 +27,7 @@ header .logo-image {
     width: 70%;
     height: 2rem;
     background-color: #fff;
+    color: teal;
     outline: none;
     border: none;
     border-radius: 1.5rem;
