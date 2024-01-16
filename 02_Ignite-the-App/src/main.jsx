@@ -1,7 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
+import PropsCompenent from './props.jsx'
+import Profile from './avatar.jsx'
 import './index.css'
+
+
 
 const newEl = React.createElement(
   'h1',
@@ -26,11 +30,21 @@ const parent = React.createElement(
   )]
 );
 
+const obj = {
+  person: 'Sushovan',
+  size: 23,
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>
-  parent
+  <>
+    <App />
+    {parent}
+    <PropsCompenent />
+    <Profile />
+  </>
 );
