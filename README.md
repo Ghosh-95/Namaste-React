@@ -7,16 +7,37 @@
 
 ### Assignments : 
 
-<table align="center" border >
-    <tr>
-        <th colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Assignments &nbsp; &nbsp; &nbsp; &nbsp;</th>
-    </tr>
-    <tr>
+<table align="center" border>
+    <tr align="center">
         <td>Chapter-01</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/Ghosh-95/Namaste-React/tree/bd4df2b8b612cb162b60740f32fcd818fa4ca6ec/01react#readme">Inception</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/tree/bd4df2b8b612cb162b60740f32fcd818fa4ca6ec/01react#readme">Inception</a></td>
     </tr>
-    <tr>
+    <tr align="center">
         <td>Chapter-02</td>
-        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/Ghosh-95/Namaste-React/tree/main/02_Ignite-the-App#readme">Igniting the App</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/tree/main/02_Ignite-the-App#readme">Igniting the App</a></td>
+    </tr>
+    <tr align="center">
+        <td>Chapter-03</td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/tree/main/03_Laying-the-foundation#readme">Laying the Foundation</a></td>
+    </tr>
+    <tr align="center">
+        <td>Chapter-04</td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/tree/main/04-food-ordering-app#readme">Talk is Cheap, Show me the Code</a></td>
+    </tr>
+    <tr align="center">
+        <td>Chapter-05</td>
+        <td><a href="">Let's Get Hooked</a></td>
+    </tr>
+    <tr align="center">
+        <td>Chapter-06</td>
+        <td><a href="">Exploring the World</a></td>
+    </tr>
+    <tr align="center">
+        <td>Chapter-07</td>
+        <td><a href="">Finding the Path</a></td>
+    </tr>
+    <tr align="center">
+        <td>Chapter-08</td>
+        <td><a href="">Let's get Classy</a></td>
     </tr>
 </table>

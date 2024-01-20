@@ -6,7 +6,7 @@ JSX is a syntax extension for JavaScript that lets you write HTML-like markup in
 
 We use JSX to generate elements and create components in React. Though `React.createElement` can generate markup in React but the code gets messy when it comes to generate lots of elements. But in JSX we can generate markup just like HTML.
 
-~~~
+~~~javascript
 const headingElement = <h1>This is an h1 element.</>
 
 It is recommended to use JSX markups inside a parenthesis:
@@ -20,7 +20,7 @@ const headingElement = (<h1>This is an h1 element.</>)
 
 1. To create multiple elements, wrap them under a single parent tag or you can use `Fragments(<></>)` to wrap them.
 
-    ~~~
+    ~~~javascript
     const headerElements = (
         <>
             <h1>Header Element</h1>
@@ -43,13 +43,13 @@ const headingElement = (<h1>This is an h1 element.</>)
 
 While a JSX getting rendered, the transpiler/compiler converts it to a React element first. Then it gets converted to normal HTML markup.
 
-``````
+```javascript
 const heading = (<h1>React Assignment</h1>);
 
 => React.createElemet(
     "h1", null, "React Assignment"
 );
-``````
+```
 
 ### Q2. What is the superpower of JSX?
 
@@ -57,7 +57,7 @@ const heading = (<h1>React Assignment</h1>);
 
 - We can write JavaScript codes, mathmatical operatons and all the other type of things inside JSX using `curly-braces`.
 
-    ~~~
+    ~~~javascript
     const price = 100 + 123;
 
     const paragraph = (
@@ -72,9 +72,8 @@ const heading = (<h1>React Assignment</h1>);
 
 `type` attribute specify the type of any HTML tag. It is same for `<script>` also, it identifies the content inside the `<script>` tag.
 
-~~~
 Here is an example of module type script tag:
-
+~~~HTML
 <script type="module" src="main.js"></script>
 ~~~
 
@@ -90,8 +89,8 @@ In `<script>` tag `type` attribute can be following:
 
 - `{TitleComponent}`: The value describes the 'TitleComponent' as a JavaScript expression or variable. With the help of `{}`, we can embed a JavaScript.
 
-    ~~~
-    const headingElement = (<h1>This is an h1 element.</>)
+    ~~~javascript
+    const headingElement = (<h1>This is an h1 element.</h1>)
 
     root.render(
         {headingElement}
@@ -99,7 +98,7 @@ In `<script>` tag `type` attribute can be following:
     ~~~
 - `{<TitleComponent/>}`: This value represents a functional component which is returning some JSX. A component is written inside `</>` or `{</>}` expression.
 
-    ~~~
+    ~~~javascript
     function TitleComponent(){
         return (
             <h1>This component is returning a heading.</h1>
@@ -117,7 +116,7 @@ In `<script>` tag `type` attribute can be following:
     ~~~
 - `<TitleComponent></TitleComponent>`: `<TitleComponent/>` and `<TitleComponent></TitleComponent>` are equivalent to one another only when 'TitleComponent' has no children. Openinig and Closing tags are created to include child components.
 
-    ~~~
+    ~~~javascript
     function DivComponent(){
         return (
             <div className="container"><div/>

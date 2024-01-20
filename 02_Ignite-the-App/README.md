@@ -11,7 +11,7 @@ A **Transitive Dependency** is one not imported directly into the project at han
 
 **npm** is the world's largest software registry. A developer can find, manage and build code packages. When used as a dependency manager for a local project, npm can install all the dependencies of a project through package.json file with one command. npm doesn't itself run any packages. If you want to run any package using npm, you must specify the package into `package.json` file. You can run a locally installed package by adding it into your package.json file in the scripts section, like this:
 
-~~~
+~~~json
 {
   "name": "your-application",
   "version": "1.0.0",
@@ -96,7 +96,7 @@ Hot Module Replacement or **HMR** is a feature that adds, removes, or exchanges 
 .gitignore is a type of text files that tells Git which files to ignore while commiting to a repository. A developer should consider putting all the files that are not needed to get commited, in .gitignore file. `package.json` file should not be included in .gitignore file.
 
 This is an example of what the .gitignore file looks like:
-~~~~
+~~~
 # Ignore 'node_modules' folder
 node_modules
 
@@ -108,7 +108,7 @@ node_modules
 
 # Ignore SASS config files
 .sass-cache
-~~~~
+~~~
 
 ### Q9. What is the difference between `package.json` and `package-lock.json`?
 
