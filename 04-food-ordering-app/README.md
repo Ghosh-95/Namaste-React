@@ -2,6 +2,8 @@
 
 ### Read more about [React Fibre](https://github.com/acdlite/react-fiber-architecture)
 
+You can find day-04 related code in [here](https://github.com/Ghosh-95/react-food-app)
+
 ### Q1. Is JSX mandatory for React?
 
 Actually, no, we don't necessarilly need to use JSX in React. We can use React.createElement() istead. But createElement() is repetitive and creates a mess in the code base. That's why we use JSX as it is more like HTML markups, it is easier to use, read and debug.
