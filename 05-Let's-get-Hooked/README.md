@@ -48,7 +48,7 @@ Modules use special derivatives `export` and `import` to interchange functionali
         ~~~
 
     - `* export`: We can export multiple functionalities form a file. As the sign suggest, it is used to import the whoel module as a export.
-    ~~~javascript
+        ~~~javascript
         export function multiplyByTwo(num) {
             return num * 2;
         };
@@ -67,3 +67,32 @@ Modules use special derivatives `export` and `import` to interchange functionali
         mathOperation.multiplyByTwo(5);
         mathOperation.divideByTwo(12);
         ~~~
+
+### Q2. What is the importance of `config.js` file?
+
+config.js is initially a configuration file that contains inoformation which are required to run a program. It is structured in a way that users can format based on their necessity. They are used for user application, server process and operating system.
+- Some programs checks configuration files at the startup for certain changes of any information related to program.
+
+### Q3. What are React Hooks? 
+
+React hooks are JavaScript functions that allow us to use some core features of React. They let us 'hooked' into React features.
+Hooks are only available while React is rendering.
+>You can either use built in hooks or you can combine them to build your own.
+
+### Q4. Why do we need a useState Hook?
+Component often need to change what's on the sceen as a result of an interaction. Component needs to remember thing: the current input value, the current image state etc. In React these type of component specific memory is called State.
+
+ A regular variable is not enough to re-render a component, after changing something.
+- Local variable doesn't persist between renders. When React renders a component, it renders from scracth - as a result it doesn't consider any changes in the local variable
+- Changes to local variable do not trigger rendering. React doesn't realize that it needs to render with the new data(re-rendering).
+
+Specifically, to update a component with new data, two things need to happen:
+- Retain/Remember the data between the randers
+- Trigger React to re-render the component with new data.
+
+useState hook provides exactly those two things:
+- A 'state' variable that retains the data between renders.
+- A 'stateSetter' function that updates the variable and trigger re-render.
+```javascript
+const [state, setState] = useState('local value');
+```
