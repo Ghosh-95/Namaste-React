@@ -26,15 +26,15 @@
     </tr>
     <tr align="center">
         <td>Chapter-05</td>
-        <td><a href="">Let's Get Hooked</a></td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/tree/main/05-Let's-get-Hooked#day05---assignments">Let's Get Hooked</a></td>
     </tr>
     <tr align="center">
         <td>Chapter-06</td>
-        <td><a href="">Exploring the World</a></td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/tree/main/06_Exploring-the-world#day06---assignments">Exploring the World</a></td>
     </tr>
     <tr align="center">
         <td>Chapter-07</td>
-        <td><a href="">Finding the Path</a></td>
+        <td><a href="https://github.com/Ghosh-95/Namaste-React/blob/main/07_Finding-the-path/README.md#day07---assignments">Finding the Path</a></td>
     </tr>
     <tr align="center">
         <td>Chapter-08</td>
