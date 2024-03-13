@@ -1,5 +1,6 @@
 import React from "react";
 import User from "./UserClass";
+import Profile from "./Profile";
 
 export default class About extends React.Component {
     constructor() {
@@ -12,6 +13,7 @@ export default class About extends React.Component {
                 <h1>About</h1>
 
                 <User data={{ name: "Sushovan Ghosh", job: "Frontend Developer", city: "Bardhaman", state: "West Bengal" }} />
+                <Profile />
             </section>
         )
     }

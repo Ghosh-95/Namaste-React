@@ -7,20 +7,19 @@ export default class User extends Component {
         this.state = {
             count: 0,
         }
-        this.timer;
     }
 
     componentDidMount() {
         console.log("Component did mount after rendering is complete");
 
-        this.timer = setInterval(() => {
-            console.log("interval of 1 second.");
-        }, 1000);
+        // this.timer = setInterval(() => {
+        //     console.log("interval of 1 second.");
+        // }, 1000);
     }
 
     componentWillUnmount() {
         console.log("Component will mount after we leave the current page, in other word when the current markup will be removed from DOM Tree");
-        clearInterval(this.timer);
+        // clearInterval(this.timer);
     }
 
     componentDidUpdate(prevProps, prevState) {
