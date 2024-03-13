@@ -8,7 +8,7 @@ export default class About extends React.Component {
 
     render() {
         return (
-            <section className="about-section">
+            <section id="about" className="about-section">
                 <h1>About</h1>
 
                 <User data={{ name: "Sushovan Ghosh", job: "Frontend Developer", city: "Bardhaman", state: "West Bengal" }} />
