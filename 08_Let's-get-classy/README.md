@@ -82,3 +82,47 @@ async componentDidMount(){
         clearInterval(this.timer);
     };
     ```
+### Q6. Why do we use super(props) in constructor?
+
+We call super() method inside constructor function of a child class, so the child class can inherit all the properties of the parent class it is extending to. As any class component in React extens to a parent class named React.Component, super() method is used to inherit the properties of parent class React.Component.
+```javascript
+class Child extends Parent{
+    constructor(prop1, prop2, prop3){
+        super(prop1, prop2); // inherits from parent class
+        this.prop3 = prop3; // create new property in child class
+    }
+};
+
+// Similarly in React
+
+class UserClass extends React.Component(){
+    constructor(){
+        super()
+    }
+}
+```
+Now, we use super(prop) to access the props that are passed into the component. All the props inside UserClass is `undefined` until we use super(props)
+```javascript
+class UserClass extends React.Component(){
+    constructor(props){
+        super(props)
+    }
+
+    render(){
+        // data that are coming from this.props
+        const { name, job, city, state } = this.props.data;
+
+        return(
+            <>
+                <h2>{name}</h2>
+                <p>{job}</p>
+                <p>{city}, {state}</p>
+            </>
+        )
+    }
+}
+```
+
+### Q7. Why can't we have the callback function of useEffect async?
+
+useEffect hook expects its callback function to return nothing except a cleanup function (which will be called when the component will be unmounted). As we all know an async function always returns a promise, using a async function in useEffect will make it return a promise which will make unnecessarry load on the page and might delay the invokation of the cleanup function. That's why do not use async funtion in useEffect
