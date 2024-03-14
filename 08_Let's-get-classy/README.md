@@ -1,139 +1,84 @@
-# Day-03 Assignments
+# Day-08 Assignments
 
-### Q1. What is JSX
+### Q1. How do you create Nested Routes in react-router-dom configuration?
 
-JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. It may look a lot like HTML, but JSX is more stricter and it can display dynamic information.
-
-We use JSX to generate elements and create components in React. Though `React.createElement` can generate markup in React but the code gets messy when it comes to generate lots of elements. But in JSX we can generate markup just like HTML.
-
-~~~javascript
-const headingElement = <h1>This is an h1 element.</>
-
-It is recommended to use JSX markups inside a parenthesis:
-const headingElement = (<h1>This is an h1 element.</>)
-
-~~~
-
->*JSX and React are two separate things. They're often use together, but you can use them independently.*
-
-<ins>**There are certain rules of writing JSX:**<ins/>
-
-1. To create multiple elements, wrap them under a single parent tag or you can use `Fragments(<></>)` to wrap them.
-
-    ~~~javascript
-    const headerElements = (
-        <>
-            <h1>Header Element</h1>
-
-            <nav>
-                <ul>
-                    <li>List Element</li>
-                    <li>List Element</li>
-                    <li>List Element</li>
-                </ul>
-            </nav>
-        </>
-    );
-    ~~~
-
-2. JSX is more strict than HTML. JSX requires a tag to be explicity closed; self-enclosing tags like `<img>` must become `<img/>`.
-
-3. Most of the attributes and other things (not all of them) should be in camelCase; `stroke-width` will become `strokeWidth`. Since `class` is a preserved word in JavaScript, it should become `className`.
-
-
-While a JSX getting rendered, the transpiler/compiler converts it to a React element first. Then it gets converted to normal HTML markup.
-
+We need to create a route with `createBrowserReact` method. It takes an array of objects as a parameter, each object contains elemetns and paths. However that object may contain more prperties such as errorElement (for rendering error page if occurs any), children (an array of router objects that contains differnet child routes).
 ```javascript
-const heading = (<h1>React Assignment</h1>);
-
-=> React.createElemet(
-    "h1", null, "React Assignment"
-);
+const router = createBrowserReact([
+    {
+        path: "/",
+        element: <App />,
+        errorElement: <ErrorPage/>,
+        children: [],
+    },
+]);
+```
+We can create a nested routing for `/path` route using `children` array as below:
+```javascript
+const router = createBrowserReact([
+    {
+        // rest of codes... as above
+        children: [
+            {
+                path: '/users',
+                element: <Users />,
+            },
+            {
+                path: '/contact/:contactId',
+                element: <Contact />,
+            },
+        ],
+    },
+]);
 ```
 
-### Q2. What is the superpower of JSX?
+### 2. Read about createHashRouter, createMemoryRouter from React Router docs.
 
-- JSX provides you privilege of writing markup inside JavaScript file. We can save lot of time by not using React.createElement().
+- `createHashRouter`: This router is useful if you are unable to configure your web server to direct all traffic to your React Router application. Instead of using normal URLs, it will use the hash (#) portion of the URL to manage the URL.
 
-- We can write JavaScript codes, mathmatical operatons and all the other type of things inside JSX using `curly-braces`.
+- `createMemoryRouter`: Instead of using the browser's history, a memory router manages its own history stack in memory. It's primarily useful for testing and component development tools, but can also be used for running React Router in any non-browser environment.
 
-    ~~~javascript
-    const price = 100 + 123;
+>You can read about them [here](https://reactrouter.com/en/main).
 
-    const paragraph = (
-        <p>Hey, total price of this product is {price}</p>
-    )
-    ~~~
+### Q3. What is the order of life cycle method calls in Class Based Components?
 
-- JSX makes our code more readable and maintainable.
+While using a class-based component, we can see the lifecycle of that component class.
+- Initially the `constructor()` function gets called.
+- Then the `render()` method gets called and all the documents gets painted in the web page.
+- Then `componentDidMount()` is called after rendering the DOM.
+- Now whenever we update or make some changes in the component, updating phase begins. Component gets rendered with new values and the DOMs get updated. Then `componentDidUpdate()` gets called at the end of the rendering the updated DOM.
+- Then when we leave (erase the current markup from DOM tree) the current page `componentWillUnmount()` gets called.
 
+Lifecycle of React's class component looks like this:
 
-### Q3. What is the role of `type` attribute in script tag? What options can be used there?
+![React lifcycle methods](https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ogimage.png)
 
-`type` attribute specify the type of any HTML tag. It is same for `<script>` also, it identifies the content inside the `<script>` tag.
+### Q4. Why do we use `componentDidMount()` ?
 
-Here is an example of module type script tag:
-~~~HTML
-<script type="module" src="main.js"></script>
-~~~
+`componentDidMount()` gets invoked, during the mounting phase, when the component is completely rendered into the DOM. We might want to execute some operation after the DOM is fully loaded into the page. For example we can make API calls inside this method (we can even make asynchronous operation).
+```javascript
+async componentDidMount(){
+    const response = await fetch('random url');
+    const data = await response.json();
+};
+```
+### Q5. Why do we use `componentWillUnmount()` ? Show with example.
 
-In `<script>` tag `type` attribute can be following:
+`componentWillUnmount()` is used to cleanup of the application when we switch routes. Since, it is quite popular to use SPA(Single Page Application), the current component's operations (if there is any) will always run in the background even after we switch route. This may cause performance issue and sometimes, overall user experience. That's why we need to terminate the current component's process before switching to another route.
+- We can take a example of a timer function that runs after a component loads.
+    ```javascript
+    componentDidMount () {
+        this.timer = setInterval(()=> {
+            console.log("Interval is running.");
 
-- `text/javascript`: It is the default standard value of a script tag.
-- `text/ecmascript`: This value indicates that the script is following `EcmaScript` standards.
-- `module`: Tells the browser that the script is a module and can be export/import other files or modules into current script.
-- `text/babel`: This indicates that the script is babel type and needs babel to transpile it.
-- `text/typescript`: As the name suggests the script is written in `TypeScript`.
-
-### Q4. `{TitleComponent}` vs `{<TitleComponent/>}` vs `{<TitleComponent></TitleComponent>}` in JSX.
-
-- `{TitleComponent}`: The value describes the 'TitleComponent' as a JavaScript expression or variable. With the help of `{}`, we can embed a JavaScript.
-
-    ~~~javascript
-    const headingElement = (<h1>This is an h1 element.</h1>)
-
-    root.render(
-        {headingElement}
-    )
-    ~~~
-- `{<TitleComponent/>}`: This value represents a functional component which is returning some JSX. A component is written inside `</>` or `{</>}` expression.
-
-    ~~~javascript
-    function TitleComponent(){
-        return (
-            <h1>This component is returning a heading.</h1>
-        );
+            // And other operations
+        });
     };
+    ```
+- Now we need to terminate or clear the interval before leaving the current component, otherwise this interval might be cause performance overload. To do that we can use componentWillUnmount method:
 
-    root.render(
-        <TitleComponent />
-    )
-
-    // OR
-    root.render(
-        {<TitleComponent />}
-    )
-    ~~~
-- `<TitleComponent></TitleComponent>`: `<TitleComponent/>` and `<TitleComponent></TitleComponent>` are equivalent to one another only when 'TitleComponent' has no children. Openinig and Closing tags are created to include child components.
-
-    ~~~javascript
-    function DivComponent(){
-        return (
-            <div className="container"><div/>
-        );
+    ```javascript
+    componentWillUnmount(){
+        clearInterval(this.timer);
     };
-
-    function ParaComponent(){
-        return (
-            <p class="children">This is a paragraph</p>
-        );
-    };
-
-    root.render(
-        <>
-            <DivComponent>
-                <ParaComponent />
-            <DivComponent/>
-        </>
-    )
-    ~~~
+    ```
